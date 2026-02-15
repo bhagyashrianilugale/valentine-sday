@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From NO to Forever ❤️</title>
+
+<style>
+* {margin:0; padding:0; box-sizing:border-box;}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#140000,#4b0015,#ff2e63);
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+section{
+    padding:60px 20px;
+}
+
+h1,h2{
+    color:#ffb6c1;
+    margin-bottom:20px;
+}
+
+p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.quote{
+    background:rgba(255,255,255,0.1);
+    padding:12px;
+    border-radius:20px;
+    margin:10px auto;
+    max-width:600px;
+    color:#ffd1dc;
+}
+
+.timeline{
+    max-width:700px;
+    margin:auto;
+    text-align:left;
+}
+
+.timeline div{
+    background:rgba(255,255,255,0.08);
+    margin:15px 0;
+    padding:15px;
+    border-radius:15px;
+}
+
+.slideshow{
+    max-width:400px;
+    margin:30px auto;
+}
+
+.slideshow img{
+    width:100%;
+    border-radius:20px;
+    display:none;
+}
+
+.slideshow img.active{
+    display:block;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#ff0055;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{background:#ff4d88;}
+
+#secretMessage{
+    display:none;
+    margin-top:20px;
+    font-size:1.4rem;
+    color:#fff0f5;
+}
+
+.heart{
+    position:fixed;
+    bottom:-10px;
+    color:#ff4e7a;
+    animation:float 5s linear infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);opacity:1;}
+    100%{transform:translateY(-100vh);opacity:0;}
+}
+
+@media(max-width:600px){
+    h1{font-size:1.8rem;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section>
+<h1>Happy First Valentine's Day Abhi ❤️</h1>
+<h2>From NO to Forever 💍</h2>
+
+<p>
+Our first Valentine’s Day together…  
+but our love story started long ago in college.  
+And today, I am proud that I chose you forever. 💖
+</p>
+
+<div class="quote">"तू आहेस म्हणून माझं आयुष्य सुंदर आहे ❤️"</div>
+<div class="quote">"आपली प्रेमकहाणी देवाने लिहिली आहे 💕"</div>
+<div class="quote">"पहिलं Valentine… पण आयुष्यभर तूच 💖"</div>
+</section>
+
+<!-- LOVE STORY -->
+<section style="background:rgba(0,0,0,0.3);">
+<h2>Our Love Story 💌</h2>
+
+<p>
+We studied together in college… 🎓❤️  
+He fell first. He proposed first.  
+And I said NO. 🙈  
+
+But we kept talking…  
+Slowly… daily… endlessly.  
+And somewhere between assignments and conversations,  
+I fell in love with the same boy  
+who never gave up on me. 💕
+
+Then life happened.  
+For 4 long years… we never met.  
+
+And destiny planned something beautiful.  
+After years… we met directly in a Kanda Pohe program —  
+with his dad and my parents sitting there. 😭❤️  
+
+From college friends…  
+to love…  
+to marriage…  
+We became forever.
+
+Before marriage he was cute…  
+Now he is full dramatic 😌✨  
+But my dramatic hero is my favorite person.
+
+And to the only one who lovingly calls me  
+"Zambya" 💕  
+I will always be yours.
+</p>
+</section>
+
+
+<!-- COLLEGE PHOTO -->
+<section style="background:rgba(0,0,0,0.3);">
+<h2>Our College Memories 🎓❤️</h2>
+<img src="photo4.jpg" style="max-width:400px;width:100%;border-radius:20px;">
+</section>
+
+<!-- SLIDESHOW -->
+<section>
+<h2>Our Beautiful Moments 💖</h2>
+<div class="slideshow">
+<img src="photo1.jpg" class="active">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+</div>
+</section>
+
+<!-- REASONS -->
+<section style="background:rgba(0,0,0,0.3);">
+<h2>Why I Fell For You 💕</h2>
+<p>Because you never gave up on me.</p>
+<p>Because you respect my parents.</p>
+<p>Because you turned my NO into Forever.</p>
+<p>Because you call me Zambya with so much love.</p>
+<p>Because you are dramatic… but only mine 😌❤️</p>
+</section>
+
+<!-- SECRET -->
+<section>
+<button onclick="askPassword()">Click for Secret Surprise 🔐</button>
+<div id="secretMessage">
+ <b>I LOVE YOU SO MUCH...</b>❤️✨  
+</div>
+</section>
+
+<audio autoplay loop>
+<source src="romantic.mp3" type="audio/mp3">
+</audio>
+
+<script>
+// slideshow
+let slides=document.querySelectorAll(".slideshow img");
+let index=0;
+setInterval(()=>{
+slides[index].classList.remove("active");
+index=(index+1)%slides.length;
+slides[index].classList.add("active");
+},3000);
+
+// password
+function askPassword(){
+let password=prompt("Enter what you call me 💕");
+if(password==="Zambya"){
+document.getElementById("secretMessage").style.display="block";
+}else{
+alert("Wrong password 😜 Try again!");
+}
+}
+
+// hearts
+setInterval(function(){
+var heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(Math.random()*20+10)+"px";
+document.body.appendChild(heart);
+setTimeout(function(){heart.remove();},5000);
+},500);
+</script>
+<audio autoplay loop>
+    <source src="Tik-Tik-Vajate-Dokyat_mp3.pm" type="audio/mp3">
+</audio>
+</body>
+</html>
