@@ -107,6 +107,11 @@ button:hover{background:#ff4d88;}
 </head>
 
 <body>
+ <button onclick="playMusic()">Play Music 🎶</button>
+
+<audio id="bgMusic" loop>
+    <source src="Tik-Tik-Vajate-Dokyat.mp3" type="audio/mpeg">
+</audio>
 
 <!-- HERO -->
 <section>
@@ -230,9 +235,12 @@ heart.style.fontSize=(Math.random()*20+10)+"px";
 document.body.appendChild(heart);
 setTimeout(function(){heart.remove();},5000);
 },500);
+
+//Play Music
+function playMusic() {
+    document.getElementById("bgMusic").play();
+ }
 </script>
-<audio autoplay loop>
-    <source src="Tik-Tik-Vajate-Dokyat_mp3.pm" type="audio/mp3">
-</audio>
+
 </body>
 </html>
